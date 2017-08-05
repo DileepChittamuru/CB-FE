@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!-- bower_components:css-->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="myApp">
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">CB-FED</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="login">login</a></li>
+            <li><a ui-sref="signUp">signUp</a></li>
+        </ul>
+    </nav>
+    <!-- view -->
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+<!-- bower_components:js -->
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- foundation -->
+<script type="text/javascript" src="src/foundation/route.js"></script>
+<!-- widgets  -->
+<script type="text/javascript" src="src/widgets/home/home-controller.js"></script>
+<script type="text/javascript" src="src/widgets/login/login-controller.js"></script>
+<script type="text/javascript" src="src/widgets/sign-up/sign-up-controller.js"></script>
+
+</html>
