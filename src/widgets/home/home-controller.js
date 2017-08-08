@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('myApp')
+        .module('cobrowse')
         .controller('homeController', homeController);
 
     homeController.$inject = ['$scope'];

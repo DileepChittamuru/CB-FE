@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('myApp')
+        .module('cobrowse')
         .controller('loginController', loginController);
 
     loginController.$inject = ['$scope'];
