@@ -1,4 +1,41 @@
-<div class="jumbotron text-center">
-    <div>login</div>
+<div class="jumbotron">
+    <div class="formHolder ng-scope" ng-controller="loginController as loginController">
+        <div class="panel panel-default">
+            <div class="text-center">
+                <h4>Login</h4>
+            </div>
+            <div class="panel-body">
+                <div class="formBody">
+                    <form class="form-horizontal" novalidate="novalidate" name="LoginForm">
+                        <div class="form-group">
+                        {{loginController.loginObj}}
+                            <label class="col-md-3 control-label" for="accNumber">Account Number</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="name" data-ng-model="loginController.loginObj.name" data-ng-minlength="3" data-ng-maxlength="8" required>
+                                <div class="text-danger">
+                                    <ng-messages for="LoginForm.name.$error" ng-if="!LoginForm.name.$pristine">
+                                        <ng-message when="required">This field is required</ng-message>
+                                        <ng-message when="minlength">length should be less than 3</ng-message>
+                                        <ng-message when="maxlength">length should be less than 8</ng-message>
+                                    </ng-messages>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="Password">Bcc Number</label>
+                            <div class="col-md-9">
+                                <input class="form-control" type="password" required="" id="Password" name="Password">
+                                <span class="text-danger" for="Password"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <button type="submit" id="RegisterBtn" class="btn btn-primary-outline pull-right" data-ng-click="loginController.login();">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-

@@ -1,4 +1,3 @@
-
 (function() {
     'use strict';
 
@@ -6,10 +5,14 @@
         .module('cobrowse')
         .controller('loginController', loginController);
 
-    loginController.$inject = ['$scope'];
+    loginController.$inject = ['$scope', '$state'];
     /* @ngInject */
-    function loginController($scope) {
+    function loginController($scope, $state) {
         var self = this;
-       console.log("loginController calling")
+        console.log("loginController calling")
+
+        self.login = function() {
+            $state.transitionTo('openAccount');
+        }
     }
 })();
